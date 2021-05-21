@@ -27,25 +27,21 @@
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
+      <div id="currentTime" class="lead"></div>
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
-        <div class="row">
-
-          <div class="col">
-            Hour
+      <div class="block">
+        <div class="input-group mb-3" id="rootEl">
+          <div class="input-group-prepend" id="another-row">
+            <span class="input-group-text hour" id="basic-addon1"></span>
           </div>
-
-          <div class="col-8">
-            Input
+          <input type="text" class="form-control" placeholder="Activity" aria-label="Activity" aria-describedby="basic-addon2">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary saveBtn" type="button">&#128190</button>
           </div>
-
-          <div class="col">
-            Save
-          </div>
-
         </div>
-      
+      </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
