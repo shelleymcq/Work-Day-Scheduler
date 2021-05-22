@@ -4,7 +4,7 @@ body {
   line-height: 1;
 }
 
-textarea {
+input {
   background: transparent;
   border: none;
   resize: none;
@@ -31,12 +31,6 @@ textarea {
   margin: 0;
 }
 
-.time-block {
-  text-align: center;
-  border-radius: 15px;
-
-}
-
 .row {
   white-space: pre-wrap;
   height: 80px;
@@ -50,31 +44,35 @@ textarea {
   background-color: #ffffff;
   color: #000000;
   /* was just border top, but the curve was weird keep this or change .time-block radius */
-  border: 1px dashed #000000;
-  border-radius: 15px;
-  width: 100px;
+  border-top: 1px dashed #000000;
+  padding-top: 5px;
+  width: 80px;
+  height: 40px;
 }
 
 .past {
-  background-color: #d3d3d3;
+  background-color: #b8b7b7;
   color: white;
 }
 
 .present {
-  background-color: #ff6961;
+  background-color: #fd918b;
   color: white;
 }
 
 .future {
-  background-color: #77dd77;
+  background-color: #a0e2a0;
   color: white;
 }
+
+
 
 .saveBtn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #06aed5;
+  height: 40px;
   color: white;
 }
 
