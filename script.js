@@ -11,63 +11,28 @@ let clock = function() {
 clock();
 setInterval(clock, 60000);
 
-// what about making *everything* here???????
 
-// use an array and loop??
-const times = [
-    '8:00 AM',
-    '9:00 AM',
-    '10:00 AM',
-    '11:00 AM',
-    '12:00 PM',
-    '1:00 PM',
-    '2:00 PM',
-    '3:00 PM',
-    '4:00 PM',
-    '5:00 PM',
-];
+// gets current hour to compare to row
+
+let time = moment().format("kk");
 
 
+const get08 = $(".hour")[0].id;
+const get09 = $(".hour")[1].id;
+const get10 = $(".hour")[2].id;
+const get11 = $(".hour")[3].id;
+const get12 = $(".hour")[4].id;
+const get13 = $(".hour")[5].id;
+const get14 = $(".hour")[6].id;
+const get15 = $(".hour")[7].id;
+const get16 = $(".hour")[8].id;
+const get17 = $(".hour")[9].id;
 
-// let makeRows = function() {
-const rootEl = $('#root');
-const hourEl = $('<div>');
-const inputEl = $("<input>");
-const buttonEl = $("<button>");
+let getHour = [get08, get09, get10, get11, get12, get13, get14, get15, get16, get17];
 
-hourEl.attr('class', 'col-1 hour');
-inputEl.attr('class', 'col-10');
-buttonEl.attr('class', 'col-1 saveBtn');
+console.log(getHour)
 
-for (let i = 0; i < 10; i++) {
-    hourEl.text(times[i])
-    rootEl.append(hourEl);
-    rootEl.append(inputEl);
-    rootEl.append(buttonEl);
-}
-
-
-
-// }
-// makeRows()
-// makeRows()
-
-
-
-
-//$.each(times, function(index, value) {
-//    console.log(value);
-//    $(".hour").text(value);
-//    $("#root").clone().insertAfter("div.block:last")
-//    return;
-//});
-
-
-
-// let cloneRow = function() {   }
-
-// $(".hour").text('8:00 AM');
-// $("#root").clone().insertAfter("div.block:last")
+// I really wanted to loop over the getHour array to check time and change color, but couldn't get it to work, and rand out of time before I could finish the save in local storage.
 
 
 
@@ -76,15 +41,6 @@ for (let i = 0; i < 10; i++) {
 
 
 
-// playing with checking current time to style hours - not working
-//let time = moment().format('LT');
-//console.log(time);
-
-//let checkTime = moment("2021-05-19 16")
-//console.log(checkTime);
-//console.log(time.isAfter(checkTime));
 
 
-//var beginningTime = moment('8:45am', 'h:mma');
-//var endTime = moment('9:00am', 'h:mma');
-///console.log(beginningTime.isBefore(endTime)); // true
+

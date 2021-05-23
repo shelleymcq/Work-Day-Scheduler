@@ -26,29 +26,20 @@ input {
 }
 
 
-/* need to remove space between blocks - this isn't working */
-.block {
-  margin: 0;
-}
-
 .row {
   white-space: pre-wrap;
   height: 80px;
   border-top: 1px solid white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .hour {
   background-color: #ffffff;
   color: #000000;
-  /* was just border top, but the curve was weird keep this or change .time-block radius */
   border-top: 1px dashed #000000;
   padding-top: 5px;
-  width: 80px;
   height: 40px;
 }
+
 
 .past {
   background-color: #b8b7b7;
@@ -72,7 +63,7 @@ input {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #06aed5;
-  height: 40px;
+  height: 80px;
   color: white;
 }
 
