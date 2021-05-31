@@ -32,12 +32,13 @@ textarea {
 }
 
 
-/* fix width */
+/* need to fix width */
 .hour {
   background-color: #ffffff;
   color: #000000;
   border: none;
   border-top: 1px dashed #000000;
+  width: 150px;
 }
 
 .past {
@@ -68,7 +69,7 @@ textarea {
   transition: all 0.3s ease-in-out;
 }
 
-#clearBtn {
+.clearBtn {
   padding: 10px;
   border-radius: 15px;
   background-color: lightblue;
