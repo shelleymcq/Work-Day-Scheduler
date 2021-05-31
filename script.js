@@ -1,13 +1,3 @@
-// .container
-// textarea
-// .row
-// .hour
-// .past
-// .present
-// .future
-// .saveBtn
-
-
 // displays current day and date in the header
 const today = moment().format('dddd, LL');
 $("#currentDay").append(today);
@@ -21,34 +11,29 @@ let clock = function() {
 clock();
 setInterval(clock, 10000);
 
-
+// 'LT' = 8:45 AM format
+// 'kk' = 08 format
 const currentHour = moment().format("kk");
 console.log(currentHour);
 
-const get08 = $(".hour")[0].id;
-const get09 = $(".hour")[1].id;
-const get10 = $(".hour")[2].id;
-const get11 = $(".hour")[3].id;
-const get12 = $(".hour")[4].id;
-const get13 = $(".hour")[5].id;
-const get14 = $(".hour")[6].id;
-const get15 = $(".hour")[7].id;
-const get16 = $(".hour")[8].id;
-const get17 = $(".hour")[9].id;
+// return an array of all elements with class = hour
+const getHours = document.querySelectorAll('.hour');
 
-
-
-$(document).ready(function() {
-    if (get17 === currentHour) {
-        $('.hour#17').addClass('present');
-    } else if (get16 < currentHour) {
-        $('.hour#17').addClass('past');
-    } else {
-        $('.hour#17').addClass('future');
+if (getHours.length > 0) {
+    for (let i = 0; i < getHours.length; i++) {
+        if (getHours[i].id > currentHour) {
+        getHours[i].className = 'future';
+        } else if (getHours[i].id === currentHour) {
+            getHours[i].className = 'present';
+        } else {
+            getHours[i].className = 'past';
+        }
     }
-});
+}
 
-// need to work on the loop
+
+
+
 
 
 
